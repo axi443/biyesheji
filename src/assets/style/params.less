@@ -1,0 +1,92 @@
+// 启动项目前做好范式
+
+/* 字体 */ 
+
+@fontSmall: 12px;
+@fontNormal: 14px;
+@fontMedium: 16px;
+@fontBig: 18px;
+@fontSuper: 20px;
+
+
+/* 整体布局配置 */ 
+@headHeight: 50px;
+@menuWidth: 180px;
+
+@lineHeight: 38px;;
+
+/* 整体z-index布局配置 结构层 topest */ 
+@zidxFrame: 999;
+@zidxTop: 100;
+@zidxMiddle: 50;
+@zidxBottom: 0;
+
+/* 颜色配置 */ 
+@normal: #333;
+@red: #F56C6C;
+@green: #67C23A;
+@blue: #409EFF;
+@yellow: #E6A23C;
+@gray: #b5b5b5;
+@subFont: #a5a1a5;
+
+@hover: #ecf5ff;
+@hoverBg: #ecf5ff;
+@selectBg: #409EFF;
+
+/* 通用方法 */ 
+
+.height(@height) {
+  line-height: @height;
+  height: @height;
+}
+
+.boxshadow() {
+  box-shadow: 0 1px 2px rgba(0,0,0,.4);
+}
+.borderRadius() {
+  border-radius: 2px;
+}
+// box-shadow
+// border-radius
+// big btn small btn
+// theme background
+
+/* 通用布白 */ 
+.warp-margin {
+  margin: 12px 22px;
+}
+.warp-padding {
+  padding: 6px 12px;
+}
+
+/* 通用段落布局 */ 
+.p-title {
+  font-size: @fontMedium;
+  text-align: left;
+  font-weight: bold;
+}
+.p-line-warp {
+  display: flex;
+  line-height: @lineHeight;
+  text-align: left;
+
+  .p-label, .p-content {
+    font-size: @fontNormal;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .p-label {
+    width: 100px;
+    flex-shrink: 0;
+  }
+  .p-content {
+    height: auto;
+    word-wrap: break-word;  
+    word-break: normal;
+  }
+}
+.font-gray {
+  color: @gray;
+}
